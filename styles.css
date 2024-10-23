@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Kallisto'; /* Define o nome da fonte */
+    src: url('fonts/Kallisto.woff2') format('woff2'), /* Define a fonte .woff2 */
+         url('fonts/Kallisto.woff') format('woff'), /* Define a fonte .woff */
+         url('fonts/Kallisto.ttf') format('truetype'); /* Define a fonte .ttf */
+    font-weight: normal; /* Define o peso da fonte como normal */
+    font-style: normal; /* Define o estilo da fonte como normal */
+}
+
+html, body {
+    width: 100%; /* Define a largura do HTML e do corpo como 100% */
+    height: 100%; /* Define a altura do HTML e do corpo como 100% */
+    overflow-x: hidden; /* Evita que o site role horizontalmente */
+    margin: 0; /* Remove a margem padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+    box-sizing: border-box; /* Faz com que o padding e a borda sejam incluídos nas dimensões totais */
+    font-family: 'Kallisto', Arial, sans-serif; /* Define a fonte padrão do texto */
+    color: white; /* Define a cor do texto como branco */
+}
+
+* {
+    margin: 0; /* Remove a margem de todos os elementos */
+    padding: 0; /* Remove o preenchimento de todos os elementos */
+    box-sizing: border-box; /* Faz com que o padding e a borda sejam incluídos nas dimensões totais */
+}
+
+header {
+    display: flex; /* Usa Flexbox para o layout do cabeçalho */
+    margin-top: 15px; /* Define uma margem superior de 15px no cabeçalho */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 20px 50px; /* Define o preenchimento do cabeçalho */
+    background-color: transparent; /* Define o fundo do cabeçalho como transparente */
+    position: absolute; /* Posiciona o cabeçalho de forma absoluta */
+    width: 100%; /* Define a largura do cabeçalho como 100% */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    z-index: 10; /* Define a camada do cabeçalho acima de outros elementos */
+}
+
+header .logo {
+    position: absolute; /* Posiciona a logo de forma absoluta */
+    left: 50px; /* Define a distância da logo ao lado esquerdo */
+    top: 10px; /* Ajusta a logo para cima */
+}
+
+header .logo img {
+    height: 90px; /* Define a altura da imagem da logo */
+    margin-left: 60px; /* Define a margem à esquerda da imagem da logo */
+}
+
+nav {
+    gap: 1rem; /* Define o espaço entre os itens de navegação */
+    flex-grow: 1; /* Permite que a navegação cresça para ocupar espaço disponível */
+    display: flex; /* Usa Flexbox para o layout da navegação */
+    justify-content: center; /* Centraliza os itens da navegação horizontalmente */
+}
+
+nav ul {
+    display: flex; /* Exibe os itens da lista como flex */
+    list-style: none; /* Remove a estilização padrão da lista */
+    gap: 40px; /* Aumente este valor para aumentar a distância entre os itens */
+}
+
+nav ul li {
+    display: flex; /* Usa Flexbox para o layout dos itens de navegação */
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+nav ul li a {
+    color: white; /* Mantém a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Define o tamanho da fonte dos links */
+    display: flex; /* Usa Flexbox para alinhar os itens */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+nav ul li:nth-child(4) a {
+    flex-direction: column; /* Alinha o conteúdo em coluna somente para o quarto item */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    margin-left: 5px; /* Adiciona uma margem à esquerda de 5px */
+}
+
+.banner {
+    background-image: url('image/BANNER-INICIAL---PROTÓTIPO.png'); /* Define a imagem de fundo do banner */
+    background-size: cover; /* Faz com que a imagem de fundo cubra todo o elemento */
+    background-position: center; /* Centraliza a imagem de fundo */
+    width: 100vw; /* Garante que o banner ocupe 100% da largura da viewport */
+    height: 100vh; /* Garante que o banner ocupe 100% da altura da viewport */
+    display: flex; /* Usa Flexbox para o layout do banner */
+    justify-content: flex-start; /* Alinha o conteúdo do banner à esquerda */
+    align-items: center; /* Alinha os itens do banner verticalmente ao centro */
+    padding: 50px; /* Define o preenchimento do banner */
+    position: relative; /* Define a posição do banner como relativa */
+}
+
+.banner .content {
+    max-width: 500px; /* Define a largura máxima do conteúdo do banner */
+}
+
+.banner h1 {
+    margin: 45px 0 20px 100px; /* Define margens para o título */
+    font-size: 36px; /* Define o tamanho da fonte do título */
+    line-height: 1.2; /* Define o espaçamento entre as linhas */
+}
+
+.banner h1 span {
+    color: #001e45; /* Define a cor do texto dentro do span como um azul escuro */
+}
+
+.banner .button {
+    margin-left: 100px; /* Define uma margem à esquerda de 100px */
+    display: inline-block; /* Exibe o botão como um bloco inline */
+    padding: 15px 30px; /* Define o preenchimento do botão */
+    background-color: #001e45; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão como branco */
+    text-decoration: none; /* Remove o sublinhado do texto do botão */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    border-radius: 25px; /* Define bordas arredondadas para o botão */
+    margin-top: 20px; /* Define uma margem superior de 20px */
+}
+
+.whatsapp-float {
+    position: absolute; /* Posiciona o botão do WhatsApp de forma absoluta */
+    bottom: 90px; /* Define a distância do botão em relação à parte inferior */
+    right: 90px; /* Define a distância do botão em relação ao lado direito */
+}
+
+.whatsapp-float img {
+    width: 80px; /* Define a largura da imagem do WhatsApp */
+    height: 80px; /* Define a altura da imagem do WhatsApp */
+    object-fit: contain; /* Faz com que a imagem mantenha suas proporções */
+}
+
+.bi {
+    font-size: 20px; /* Define o tamanho da fonte do ícone */
+    color: white; /* Define a cor do ícone como branco */
+    margin-right: 5px; /* Define uma margem à direita de 5px */
+}
+
+strong {
+    color: #00fff2; /* Define a cor do texto forte como um azul claro */
+}
+
+/* Estilo da caixa de busca */
+.input-group {
+    max-width: 400px; /* Define a largura máxima da caixa de busca */
+    margin: 0 auto; /* Centraliza a caixa de busca horizontalmente */
+    display: flex; /* Usa Flexbox para o layout da caixa de busca */
+}
+
+.input-group-text {
+    border-radius: 5px 0 0 5px; /* Arredonda as bordas do lado esquerdo */
+    background-color: #001e45a2; /* Define a cor de fundo da parte da esquerda da caixa de busca */
+    color: white; /* Define a cor do texto da parte da esquerda da caixa de busca como branco */
+    display: flex; /* Usa Flexbox para o layout da parte da esquerda da caixa de busca */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px; /* Define o preenchimento da parte da esquerda da caixa de busca */
+}
+
+.form-control {
+    border-radius: 0 5px 5px 0; /* Arredonda as bordas do lado direito */
+    padding: 10px; /* Define o preenchimento da caixa de entrada */
+    border-color: #001e45a2; /* Define a cor da borda da caixa de entrada */
+    height: auto; /* Define a altura da caixa de entrada como automática */
+}
+
+.input-group .form-control {
+    border-left: none; /* Remove a borda esquerda da caixa de entrada */
+}
+
+/* Centraliza e ajusta a altura das navs */
+nav ul li form {
+    display: flex; /* Usa Flexbox para o layout do formulário dentro do item de navegação */
+    align-items: center; /* Centraliza verticalmente o formulário */
+}
+
+/* Garantir que o layout esteja fluindo corretamente e sem quebra */
+.container {
+    max-width: 1200px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Define o preenchimento do container */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header .logo img {
+        height: 70px; /* Diminui a altura da logo em telas menores */
+    }
+
+    nav ul {
+        gap: 20px; /* Diminui o espaço entre os itens de navegação em telas menores */
+    }
+
+    .banner h1 {
+        font-size: 28px; /* Diminui o tamanho do título em telas menores */
+        margin: 20px 0; /* Ajusta as margens do título */
+    }
+
+    .banner .button {
+        padding: 10px 20px; /* Diminui o preenchimento do botão em telas menores */
+        font-size: 14px; /* Diminui o tamanho da fonte do botão */
+        margin-left: 0; /* Remove a margem esquerda do botão */
+    }
+
+    .input-group {
+        max-width: 100%; /* Define a largura máxima da caixa de busca como 100% */
+    }
+
+    .input-group-text, .form-control {
+        font-size: 14px; /* Diminui o tamanho da fonte na caixa de busca */
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+    header .logo img {
+        height: 50px; /* Diminui ainda mais a altura da logo em telas muito pequenas */
+    }
+
+    nav ul {
+        flex-direction: column; /* Muda a direção dos itens de navegação para coluna */
+        align-items: center; /* Centraliza os itens da navegação horizontalmente */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Adiciona espaço entre os itens da navegação */
+    }
+
+    .banner h1 {
+        font-size: 24px; /* Diminui ainda mais o tamanho do título em telas muito pequenas */
+    }
+
+    .banner .button {
+        padding: 8px 16px; /* Diminui o preenchimento do botão em telas muito pequenas */
+        font-size: 12px; /* Diminui o tamanho da fonte do botão */
+    }
+
+    .input-group {
+        flex-direction: column; /* Muda a direção da caixa de busca para coluna */
+        max-width: 100%; /* Define a largura máxima da caixa de busca como 100% */
+    }
+
+    .input-group-text, .form-control {
+        font-size: 12px; /* Diminui o tamanho da fonte na caixa de busca em telas muito pequenas */
+    }
+}
